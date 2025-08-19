@@ -43,8 +43,21 @@ nav {
     display: grid;
     position: fixed;
     gap: 5px;
-    right: -240px;
+    top: 25%;
+    right: -255px;
     transition: right 0.5s ease-in-out;
+}
+
+#open_op {
+    position: relative;
+    width: 51px;
+    left: -40px;
+}
+
+#open_op:hover {
+    right: 5px;
+    width: 260px;
+
 }
 
 nav:hover {
