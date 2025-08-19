@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: -webkit-linear-gradient(90deg, #000000, #0d1521, #070e18);
+    background: linear-gradient(90deg, #000000, #0d1521, #070e18);
+    height: 100vh;
+    color: #FA4616;
+}
+
+.fundo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background-image: url('https://i.imgur.com/1Z5b7kH.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+header {
+    display: flex;
+    color: #ff7500;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin: 30px auto;
+    padding: 10px;
+}
+
+nav {
+    display: grid;
+    position: fixed;
+    gap: 5px;
+    right: -240px;
+    transition: right 0.5s ease-in-out;
+}
+
+nav:hover {
+    right: 5px;
+}
+
+button {
+    padding: 25px 20px;
+    width: 260px;
+    background-color: #ff7500;
+    color: #003c70;
+    border: none;
+    box-shadow: 0 0 10px rgba(255, 117, 0, 0.5);
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+    background-color: #003c70;
+    color: #ff7500;
+    box-shadow: 0 0 15px rgba(255, 117, 0, 0.5);
+}
+
+ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    grid-gap: 10px;
+    margin: 0 10px;
+}
+
+li {
+    background-color: #fff2df;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 5px;
+    transition: 0.3s;
+}
+
+li:hover {
+    transform: scale(1.05);
+}
+
+li #porduct {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #003c70;
+    text-shadow: 2px 2px 4px #00000034;
+}
+
+li #price {
+    text-align: center;
+    font-size: 16px;
+    color: #00701c;
+    margin-top: 2px;
+    text-shadow: 2px 2px 4px #00000038;
+}
+
+
+
+li img {
+    width: 100%;
+    border-radius: 5px;
+}
