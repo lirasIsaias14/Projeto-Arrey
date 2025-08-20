@@ -45,7 +45,7 @@ nav {
     gap: 5px;
     top: 25%;
     right: -255px;
-    transition: right 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
 }
 
 #open_op {
@@ -57,17 +57,8 @@ nav {
     text-align: start;
 }
 
-#open_op:hover {
-    left: 0px;
-    width: 260px;
-}
-
-nav:hover {
-    right: 5px;
-}
-
 button {
-    padding: 25px 20px;
+    padding: 10px 20px;
     width: 260px;
     background-color: #ff7500;
     color: #003c70;
@@ -84,6 +75,7 @@ button:hover {
     background-color: #003c70;
     color: #ff7500;
     box-shadow: 0 0 15px rgba(255, 117, 0, 0.5);
+    transform: scale(1.05);
 }
 
 ul {
