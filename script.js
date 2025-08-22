@@ -4,22 +4,6 @@ const viwAll = document.getElementById('viewAll');
 const descont = document.getElementById('descont');
 const filter = document.getElementById('filter');
 const sumAll = document.getElementById('sumAll');
-const add = document.getElementById('add');
-
-btt_op.onclick = function () {
-    nav = document.getElementById('menu-btt');
-    if (nav.style.width == '260px') {
-        nav.style.width = '0px';
-        nav.style.right = '5px';
-        btt_op.style.left = '-22px';
-        btt_op.style.width = '55px';
-    } else {
-        btt_op.style.left = '0px';
-        btt_op.style.width = '260px';
-        nav.style.width = '260px';
-        nav.style.right = '5px';
-    }
-}
 
 function showAll(arrey) {
     let myProduct = '';
@@ -33,14 +17,22 @@ function showAll(arrey) {
             </li>
         `
     });
+
     list.innerHTML = myProduct;
+
+    document.querySelectorAll(".product").forEach(item => {
+        item.addEventListener("click", () => {
+            const name = item.dataset.name;
+            alert(`Você clicou em: ${name}`);
+        });
+    });
 }
 
 
 function add10pocent() {
     const newPrice = product.map((item) => ({
         ...item,
-        price: item.price * 0.9.toFixed(2),
+        price: Number((item.price * 0.9).toFixed(2)),
     }));
     showAll(newPrice);
 }
@@ -59,7 +51,43 @@ function sunAll() {
     `
 }
 
-sumAll.addEventListener('click', sunAll)
-filter.addEventListener('click', showVegan)
-viwAll.addEventListener('click', () => showAll(product));
+function openMenu() {
+    const menu = document.querySelector('.menu-btt');
+    if (menu.style.right === '-295px') {
+        menu.style.right = '0px';
+        btt_op.innerHTML = '&#11167;';
+        btt_op.style.left = '0px';
+    } else {
+        menu.style.right = '-295px';
+        btt_op.style.left = '-50px';
+        btt_op.innerHTML = '&#11166;';
+        btt_op.style.transition = '0.5s ease-in-out';
+    }
+}
+
+function clouseMenu() {
+    const menu = document.querySelector('.menu-btt');
+    if (menu.style.right === '0px') {
+        menu.style.right = '-295px';
+        btt_op.style.left = '-50px';
+        btt_op.innerHTML = '&#11166;';
+        btt_op.style.transition = '0.5s ease-in-out';
+    }
+}
+
+btt_op.addEventListener('click', openMenu);
+
+sumAll.addEventListener('click', sunAll);
+sumAll.addEventListener('click', clouseMenu);
+
+filter.addEventListener('click', showVegan);
+filter.addEventListener('click', clouseMenu);
+
+viwAll.addEventListener('click', showAll(product));
+viwAll.addEventListener('click', clouseMenu);
+
 descont.addEventListener('click', add10pocent);
+descont.addEventListener('click', clouseMenu);
+
+
+

@@ -8,14 +8,15 @@
 body {
     background: -webkit-linear-gradient(90deg, #000000, #0d1521, #070e18);
     background: linear-gradient(90deg, #000000, #0d1521, #070e18);
-    height: 100vh;
+    height: 100%;
+    width: 100vw;
     color: #FA4616;
 }
 
 .fundo {
     position: fixed;
     top: 0;
-    left: 0;
+    left: -25%;
     height: 100vh;
     background-image: url('https://i.imgur.com/1Z5b7kH.png');
     background-size: cover;
@@ -39,23 +40,30 @@ h1 {
     padding: 10px;
 }
 
-nav {
+.menu-btt {
     display: grid;
     position: fixed;
     gap: 5px;
     top: 25%;
-    right: -255px;
+    right: -295px;
+    background: #3838389f;
+    border-radius: 10px 0 0 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    padding: 10px;
     transition: 0.5s ease-in-out;
 }
 
 #open_op {
     position: relative;
-    width: 29px;
-    left: -22px;
-    transition: 0.5s ease-in-out;
-    padding: 10px 7px;
+    left: -50px;
+    padding: 10px 10px;
+    font-size: 15px;
     text-align: start;
+    align-items: center;
 }
+
+
 
 button {
     padding: 10px 20px;
@@ -83,33 +91,39 @@ ul {
     display: grid;
     grid-template-columns: 200px 200px 200px;
     grid-gap: 10px;
-    margin: 0 10px;
+    margin: 0 15vw;
 }
 
 li {
-    background-color: #fff2df;
+    background-color: #212121;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: #E8A236 2px solid;
     border-radius: 5px;
     padding: 5px;
     transition: 0.3s;
+    cursor: pointer;
 }
 
 li:hover {
     transform: scale(1.05);
 }
 
+li:active {
+    opacity: 0.5;
+}
+
 li #porduct {
     text-align: center;
     font-size: 18px;
     font-weight: bold;
-    color: #003c70;
+    color: #E8A236;
     text-shadow: 2px 2px 4px #00000034;
 }
 
 li #price {
     text-align: center;
     font-size: 16px;
-    color: #00701c;
+    color: #6fcb2d;
     margin-top: 2px;
     text-shadow: 2px 2px 4px #00000038;
 }
@@ -119,4 +133,55 @@ li #price {
 li img {
     width: 100%;
     border-radius: 5px;
+}
+
+section {
+    height: 100%;
+    /* width: 100vh; */
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #000000ad;
+}
+
+.products {
+    background: #383838;
+    padding: 10px;
+    margin: auto;
+    display: flex;
+    position: relative;
+    top: 25%;
+    justify-content: flex-start;
+    align-items: center;
+    width: 65%;
+    border-radius: 5px;
+    border: #E8A236 2px solid;
+}
+
+.products img {
+    width: 300px;
+    height: auto;
+    margin-bottom: 10px;
+    object-fit: cover;
+    border: #e8a13691 2px solid;
+    border-radius: 5px;
+}
+
+.description {
+    margin-left: 20px;
+    margin-top: 25px;
+}
+
+.infor h2 {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.description p {
+    margin: 15px 0;
+}
+
+.description #price {
+    margin: 50px 0;
 }
