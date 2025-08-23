@@ -369,7 +369,7 @@ section {
 
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 395px) {
     ul {
         margin: 0px 10px;
     }
@@ -401,6 +401,10 @@ section {
 @media screen and (max-width: 360px) {
     .receipt {
         margin: 0px 20%;
+    }
+
+    ul {
+        margin: 10px 15px;
     }
 }
 

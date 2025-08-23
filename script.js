@@ -134,12 +134,10 @@ function openMenu() {
     const menu = document.querySelector('.menu-btt');
     if (menu.style.right === '-295px') {
         menu.style.right = '0px';
-        btt_op.innerHTML = '&#11167;';
         btt_op.style.left = '0px';
     } else {
         menu.style.right = '-295px';
         btt_op.style.left = '-50px';
-        btt_op.innerHTML = '&#11166;';
         btt_op.style.transition = '0.5s ease-in-out';
     }
 }
