@@ -97,7 +97,7 @@ function sunAll() {
             <tr>
             <td>X-Salada</td>
             <td>1</td>
-            <td>$30.00</td>
+            <td>R$ 30.00</td>
         </tr>
         <tr>
             <td>X-Bacon</td>
