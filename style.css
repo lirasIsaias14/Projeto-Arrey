@@ -16,7 +16,6 @@ body {
 .fundo {
     position: fixed;
     top: 0;
-    left: -25%;
     height: 100vh;
     background-image: url('https://i.imgur.com/1Z5b7kH.png');
     background-size: cover;
@@ -28,7 +27,6 @@ body {
 header {
     display: flex;
     color: #ff7500;
-    padding: 10px;
     text-align: center;
     margin-bottom: 30px;
     margin-top: 20px;
@@ -91,7 +89,7 @@ ul {
     display: grid;
     grid-template-columns: 200px 200px 200px;
     grid-gap: 10px;
-    margin: 0 15vw;
+    margin: 0 25%;
 }
 
 li {
@@ -101,7 +99,7 @@ li {
     border-radius: 5px;
     padding: 5px;
     transition: 0.3s;
-    cursor: pointer;
+    text-align: center;
 }
 
 li:hover {
@@ -137,7 +135,7 @@ li img {
 
 section {
     height: 100%;
-    /* width: 100vh; */
+    width: 100%;
     display: none;
     position: absolute;
     top: 0;
@@ -154,7 +152,7 @@ section {
     top: 25%;
     justify-content: flex-start;
     align-items: center;
-    width: 65%;
+    width: 50%;
     border-radius: 5px;
     border: #E8A236 2px solid;
 }
@@ -173,15 +171,265 @@ section {
     margin-top: 25px;
 }
 
-.infor h2 {
+.infor h2,
+.description h2 {
     text-align: center;
     margin-bottom: 5px;
+    color: #E8A236;
 }
 
 .description p {
+    text-align: center;
     margin: 15px 0;
+    color: whitesmoke;
 }
 
 .description #price {
-    margin: 50px 0;
+    margin: 50px 60px;
+    border-radius: 5px;
+    box-shadow: 3px 5px 10px rgba(0, 18, 21, 1);
+    text-align: center;
+    font-weight: bold;
+    background-color: #0e7330;
+    color: #dff754;
+    padding: 10px 10px;
+}
+
+.receipt {
+    width: 250px;
+    background: white;
+    border: 2px dashed #777676;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #000000;
+    margin: 0 95%;
+
+}
+
+.shop-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.info {
+    text-align: center;
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+}
+
+.receipt table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+    font-size: 0.85rem;
+}
+
+.receipt table th,
+.receipt table td {
+    padding: 4px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.barcode {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.thanks {
+    font-size: 0.85rem;
+    text-align: center;
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 1114px) {
+    ul {
+        margin: 0px 23%;
+    }
+
+    .receipt {
+        margin: 0 87%;
+    }
+
+    section {
+        height: 115%;
+    }
+
+    .products {
+        width: 55%;
+    }
+}
+
+@media screen and (max-width: 884px) {
+    ul {
+        margin: 0px 16%;
+    }
+
+    section {
+        height: 100%;
+    }
+
+    .products {
+        width: 68%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    ul {
+        margin: 0px 12%;
+    }
+
+    .products img {
+        width: 236px;
+    }
+}
+
+@media screen and (max-width: 834px) {
+    .products img {
+        width: 236px;
+    }
+
+    .products {
+        width: 65%;
+    }
+}
+
+@media screen and (max-width: 820px) {
+    ul {
+        margin: 0px 13%;
+    }
+
+    .description button {
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    ul {
+        margin: 0px 11%;
+    }
+
+    .description button {
+        width: 210px;
+    }
+}
+
+@media screen and (max-width: 428px) {
+    ul {
+        margin: 0px 6%;
+        grid-template-columns: 180px 180px;
+    }
+
+    .fundo {
+        right: -75%;
+    }
+
+    .products {
+        display: grid;
+        justify-content: center;
+    }
+
+    .infor h2 {
+        font-size: 30px;
+        border-bottom: #1c1c1c 2px solid;
+        border-radius: 4px;
+        margin-bottom: 20px;
+    }
+
+    .description {
+        margin-left: 0px;
+        margin-top: 0px;
+        display: grid;
+        justify-content: center;
+    }
+
+    .description #price {
+        margin: 20px 60px;
+    }
+
+    section {
+        height: 125%;
+    }
+
+    .receipt {
+        margin: 0px 35%;
+    }
+
+}
+
+@media screen and (max-width: 390px) {
+    ul {
+        margin: 0px 10px;
+    }
+
+    section {
+        height: 120%;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    ul {
+        margin: 10px 20px;
+        grid-template-columns: 160px 160px;
+    }
+
+    .products img {
+        width: 215px;
+    }
+
+    section {
+        height: 125%;
+    }
+
+    .receipt {
+        margin: 0px 30%;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .receipt {
+        margin: 0px 20%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    ul {
+        margin: 10px 3px;
+        grid-template-columns: 150px 150px;
+    }
+
+    .products img {
+        width: 190px;
+        margin-left: 9px;
+    }
+
+    .infor h2 {
+        font-size: 25px;
+        width: 189px;
+        margin-left: 10px;
+    }
+
+    .description button {
+        width: 198px;
+    }
+
+    .description #price {
+        margin: 20px 50px;
+    }
+
+    section {
+        height: 170%;
+    }
 }
